@@ -1,0 +1,7 @@
+{
+  "name": "layersoft-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
