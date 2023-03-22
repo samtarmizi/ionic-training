@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from 'src/app/services/register.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -10,7 +11,10 @@ export class RegisterPage implements OnInit {
   request: any;
   response: any;
 
-  constructor(private _register:RegisterService) { }
+  constructor(
+    private _register:RegisterService,
+    private router:Router
+    ) { }
 
   ngOnInit() {
     this.request = {
@@ -26,6 +30,10 @@ export class RegisterPage implements OnInit {
     this._register.register(this.request).then((response) => {
       this.response = response;
       console.log('from register ts',this.response)
+      if(this.response.success){
+        // redirect to login page
+        this.router.navigate(['/success']);
+      }
     }).catch((error) => {
       console.log(error)
     })
