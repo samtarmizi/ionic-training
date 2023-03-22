@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'list-todos',
     loadChildren: () => import('./list-todos/list-todos.module').then( m => m.ListTodosPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="request.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Identity Number</ion-label>
+      <ion-input type="text" [(ngModel)]="request.nric"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="request.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="request.email"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="submitForm()">Register</ion-button>
+</ion-content>
