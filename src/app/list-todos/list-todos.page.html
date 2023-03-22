@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List Todos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let d of data">
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+      <ion-card-subtitle>{{ d.completed }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ d.title }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

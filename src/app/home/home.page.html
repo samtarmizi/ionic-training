@@ -9,12 +9,19 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Layersoft Apps v1</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header routerLink="/profile">
+      Go to profile
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header routerLink="/list-todos">
+      Go to list todos
+    </ion-card-header>
+  </ion-card>
 </ion-content>
