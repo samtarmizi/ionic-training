@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RegisterService } from 'src/app/services/register.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -10,7 +10,7 @@ export class RegisterPage implements OnInit {
   request: any;
   response: any;
 
-  constructor() { }
+  constructor(private _register:RegisterService) { }
 
   ngOnInit() {
     this.request = {
@@ -23,6 +23,12 @@ export class RegisterPage implements OnInit {
 
   submitForm(){
     // call function from service
+    this._register.register(this.request).then((response) => {
+      this.response = response;
+      console.log('from register ts',this.response)
+    }).catch((error) => {
+      console.log(error)
+    })
   }
 
 }
